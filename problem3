@@ -1,0 +1,21 @@
+Array.prototype.map2 = function(func){
+  for(var i = 0; i < this.length; i++){
+    this[i] = func(this[i]);
+  }
+  return this;
+};
+
+var numbers = [1, 2, 3, 4, 5];
+var numbersDoubled = numbers.map2(function(number) {
+  return number * 2;
+});
+console.log(numbersDoubled); // should equal [2, 4, 6, 8, 10]
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+var string = {
+  pluralize: function(word){
+    if(word === undefined){
+      return;
+    }
+    if(word.slice(-1) == "y"){
+      var edit = word.substring(0,word.length-1);
+      var res = edit.concat("ies");
+      return res;
+    }else{
+      return word.concat("s")
+    }
+  }
+}
+
+console.log(string.pluralize('baby'));
+console.log(string.pluralize('cat'));
